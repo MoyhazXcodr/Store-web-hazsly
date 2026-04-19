@@ -12,3 +12,43 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
+/* ========================================= */
+/* EFEK & ANIMASI CUSTOM (LOGIKA MURNI CSS)  */
+/* ========================================= */
+
+/* Animasi pas pindah tab (Muncul dari bawah) */
+.animasi-masuk {
+  animation: fadeSlideUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Kandang Produk: Efek Glow pas di-hover */
+.kandang-produk {
+  transition: all 0.3s ease-in-out;
+}
+
+.kandang-produk:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 210, 255, 0.15); /* Efek shadow cyan */
+  border-color: rgba(0, 210, 255, 0.5);
+}
+
+/* Efek zoom gambar dari dalem kandang */
+.gambar-produk {
+  transition: transform 0.5s ease-in-out;
+}
+
+.kandang-produk:hover .gambar-produk {
+  transform: scale(1.1);
+}
